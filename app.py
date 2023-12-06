@@ -10,6 +10,7 @@ if uploaded_img is not None:
         f.write(uploaded_img.read())
 img=cv2.imread("img.jpg",0)
 img=np.array(img)
+st.write(img.shape)
 img=img.reshape(img.shape[0],48,48,1)
 ind=model.predict(img)
 st.write("The emotion displayed is ",emotions[ind])
