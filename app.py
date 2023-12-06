@@ -9,6 +9,7 @@ if uploaded_img is not None:
     with open("img.jpg",'wb') as f:
         f.write(uploaded_img.read())
 img=cv2.imread("img.jpg",0)
+st.image(img)
 img=np.array(img)
 st.write(img.shape)
 img=img.reshape(img.shape[0],48,48,1)
