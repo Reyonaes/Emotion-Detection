@@ -1,5 +1,5 @@
 import streamlit as st
-from opencv import cv2
+import cv2
 from tensorflow import keras
 uploaded_img = st.file_uploader("Upload an image to detect emotion", type= ['png', 'jpg', 'jpeg'])
 model=keras.models.load_model("Emotion_Model.h5")
