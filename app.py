@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 from tensorflow import keras
 uploaded_img = st.file_uploader("Upload an image to detect emotion", type= ['png', 'jpg', 'jpeg'])
-model=keras.models.load_model("Emotion_Model.h5")
+model=keras.models.load_model("Emotion_Model2.h5")
 emotions=["Angry","Disgust","Fear","Happy","Neutral","Sad","Surprise"]
 if uploaded_img is not None:
     with open("img.jpg",'wb') as f:
