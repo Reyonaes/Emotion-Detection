@@ -3,7 +3,7 @@ import cv2
 from tensorflow import keras
 uploaded_img = st.file_uploader("Upload an image to detect emotion", type= ['png', 'jpg', 'jpeg'])
 model=keras.models.load_model("Emotion_Model.h5")
-emotions=["angry","disgust","fear","happy","neutral","sad","surprise"]
+emotions=["Angry","Disgust","Fear","Happy","Neutral","Sad","Surprise"]
 if uploaded_img is not None:
     with open("img.jpg",'wb') as f:
         f.write(uploaded_img.read())
