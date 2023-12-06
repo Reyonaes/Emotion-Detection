@@ -2,4 +2,3 @@ streamlit
 opencv-python
 tensorflow
 keras
-cv2
