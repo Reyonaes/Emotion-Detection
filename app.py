@@ -10,6 +10,7 @@ emotions=["Angry","Disgust","Fear","Happy","Neutral","Sad","Surprise"]
 if uploaded_img is not None:
     with open("img.jpg",'wb') as f:
         f.write(uploaded_img.read())
+    st.image("img.jpg")
     img=cv2.imread("img.jpg",0)
     img=np.array(img)
     img=img.reshape(48,48,1)
