@@ -12,6 +12,7 @@ if uploaded_img is not None:
         f.write(uploaded_img.read())
     st.image("img.jpg")
     img=cv2.imread("img.jpg",0)
+    img=cv2.resize(img, (48,48))
     img=np.array(img)
     img=img.reshape((48,48,1))
     img = np.expand_dims(img, axis=0)
