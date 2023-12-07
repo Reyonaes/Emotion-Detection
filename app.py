@@ -8,12 +8,12 @@ emotions=["Angry","Disgust","Fear","Happy","Neutral","Sad","Surprise"]
 if uploaded_img is not None:
     with open("img.jpg",'wb') as f:
         f.write(uploaded_img.read())
-img=cv2.imread("img.jpg",0)
-img=np.array(img)
-img=img.reshape(48,48,1)
-img = np.expand_dims(img, axis=0)
-img = np.expand_dims(img, axis=-1)
-img=img.astype("float32")/255.0
-prob=model.predict(img)
-ind=np.argmax(prob)
-st.write("The emotion displayed is ",emotions[ind])
+    img=cv2.imread("img.jpg",0)
+    img=np.array(img)
+    img=img.reshape(48,48,1)
+    img = np.expand_dims(img, axis=0)
+    img = np.expand_dims(img, axis=-1)
+    img=img.astype("float32")/255.0
+    prob=model.predict(img)
+    ind=np.argmax(prob)
+    st.write("The emotion displayed is ",emotions[ind])
