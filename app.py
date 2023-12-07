@@ -12,5 +12,6 @@ img=cv2.imread("img.jpg",0)
 img=np.array(img)
 img=img.reshape(48,48,1)
 img=img.astype("float32")/255.0
-ind=model.predict(img)
+prob=model.predict(img)
+ind=np.argmax(prob)
 st.write("The emotion displayed is ",emotions[ind])
