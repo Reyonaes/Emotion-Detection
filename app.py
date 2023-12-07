@@ -11,6 +11,8 @@ if uploaded_img is not None:
 img=cv2.imread("img.jpg",0)
 img=np.array(img)
 img=img.reshape(48,48,1)
+img = np.expand_dims(img, axis=0)
+img = np.expand_dims(img, axis=-1)
 img=img.astype("float32")/255.0
 prob=model.predict(img)
 ind=np.argmax(prob)
